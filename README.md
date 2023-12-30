@@ -7,6 +7,8 @@ NutritionAl Leverages the google palm model thus needs a google api key for runn
 
 https://huggingface.co/spaces/smishr-18/Nutrition-Table-Content-Analysis
 
+![Screenshot 2023-12-30 102504](https://github.com/mishra-18/Nutrition-Facts-Based-LLM/assets/155224614/bca17a39-cbef-40c5-9767-e7dbda0ada6d)
+
 ## Usage
 * Start by cloniing the repository
 ```
@@ -22,10 +24,12 @@ sudo apt-get tesseract-ocr
 ```
 pip install -r requirements
 ```
-* You can get you google api key from makersuite.google.com
+* You can get you google api key from makersuite.google.com.
 Go to .env, open it and add your api key ```GOOGLE_API_KEY="your api key"```
 
-**Finally run this command**
+:snake: **Finally run this command**
 ```
 python app.py
 ```
+## License
+This project is licensed under the Apache 2.0.
