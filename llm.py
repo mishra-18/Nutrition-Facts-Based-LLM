@@ -1,7 +1,9 @@
 import pytesseract
-
+from dotenv import load_dotenv, find_dotenv
+# LOAD THE API KEY FROM .env
+load_dotenv(find_dotenv())
 import google.generativeai as palm
-api_key = 'AIzaSyB7-RzBwTAfVA-7ZGk2mEOQwOxshpwzhpM' # put your API key here
+api_key = os.environ["GOOGLE_API_KEY"] # put your API key here
 palm.configure(api_key=api_key)
 models = [m for m in palm.list_models() if 'generateText' in m.supported_generation_methods]
 model = models[0].name
