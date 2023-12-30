@@ -1,4 +1,5 @@
 import pytesseract
+import os
 from dotenv import load_dotenv, find_dotenv
 # LOAD THE API KEY FROM .env
 load_dotenv(find_dotenv())
