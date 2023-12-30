@@ -1,0 +1,10 @@
+# Core Libraries
+numpy>=1.21.0
+scipy>=1.7.3
+pytesseract
+google-generativeai
+opencv-python
+# Web Application Framework
+gradio
+# Package Management
+pip>=23.3.2
