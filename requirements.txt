@@ -4,7 +4,7 @@ scipy>=1.7.3
 pytesseract
 google-generativeai
 opencv-python
-# Web Application Framework
+python-dot-env
 gradio
 # Package Management
 pip>=23.3.2
