@@ -14,10 +14,7 @@ model = models[0].name
 def modelinfo():
     model = [ model for model in palm.list_models() ]
     for m in model:
-        print(f" Model Name: {m.name} \n 
-                 Display Name: {m.display_name} \n 
-                 Token Limit: {m.input_token_limit} , {m.output_token_limit} \n 
-                 Temperature: {m.temperature} \n")
+        print(f" Model Name: {m.name} \n Display Name: {m.display_name} Token Limit: {m.input_token_limit} , {m.output_token_limit} \n Temperature: {m.temperature} \n")
         
 def llm(img):
     text = pytesseract.image_to_string(img, lang='eng')
@@ -46,3 +43,5 @@ def llm(img):
     )
     
     return text.result
+
+
