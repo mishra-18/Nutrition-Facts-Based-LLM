@@ -23,8 +23,8 @@ def llm(img):
     text = pytesseract.image_to_string(img, lang='eng')
     
     # generate text
-    prompt = {"take this peace of information and give all the information in point wise better format also give some recomendation related to them, \
-                   if you don't get any nutrition content simply reply 'I don't seem have any knowledge of the perticular Nutrition Content' " + text,
+    prompt = {"take this piece of information and give all the information in point wise better format also give some recommendation related to them, \
+                   if you don't get any nutrition content simply reply 'I don't seem to have any knowledge of the particular Nutrition Content' " + text,
                    
                "Take this Nutrition facts information and give all the contents and proportion in point wise Markdown format also give some recommendation related to them, \
                 Make sure the Recommendations are given in bulleted format under the heading Recommendations \
@@ -36,13 +36,13 @@ def llm(img):
                    }
     
     # print(prompt)
-    
     text = palm.generate_text(
-        prompt=prompt,
+        prompt=prompt[0],
         model=model,
         temperature=0.3,
         max_output_tokens=2000,
         top_p=0.8,
         top_k=40,
     )
+    
     return text.result
